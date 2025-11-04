@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Inizio Questionario</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #f5f5f5;
+    }
+    button {
+      font-size: 20px;
+      padding: 15px 30px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <h1>Benvenutə al questionario!</h1>
+  <p>Premi il pulsante per iniziare:</p>
+  <button onclick="randomRedirect()">Inizia</button>
+
+  <script>
+    function randomRedirect() {
+      const links = [
+        "https://forms.gle/raNF2WaQ1sYqZmMf6", // <-- Link Condizione A
+        "https://forms.gle/ksbGTFYdzwNwGspy5"  // <-- Link Condizione B
+      ];
+      const randomIndex = Math.floor(Math.random() * links.length);
+      window.location.href = links[randomIndex];
+    }
+  </script>
+</body>
+</html>
